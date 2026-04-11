@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                     <div>
                         <div style={{ marginBottom: 20 }}>
                             <img
-                                src="https://raw.githubusercontent.com/Hyt-1020/HyTork/main/public/logotm.png"
+                                src="/logotm.png"
                                 alt="HyTork Brand"
                                 style={{ height: 48, width: 'auto', objectFit: 'contain' }}
                                 referrerPolicy="no-referrer"

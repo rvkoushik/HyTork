@@ -33,7 +33,7 @@ const Header: React.FC = () => {
                 {/* ── Logo ── */}
                 <a href="#home" style={{ display: 'flex', alignItems: 'center' }}>
                     <img
-                        src="https://raw.githubusercontent.com/Hyt-1020/HyTork/main/public/logotm.png"
+                        src="/logotm.png"
                         alt="HyTork Brand"
                         style={{ 
                             height: 42, 
