@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import BuildVehicle from './components/BuildVehicle';
 import Features from './components/Features';
 import Products from './components/Products';
+import SpecsCompare from './components/SpecsCompare';
+import Applications from './components/Applications';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -14,7 +17,6 @@ import { AnimatePresence } from 'motion/react';
 const App: React.FC = () => {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-    // Smooth scroll for anchor links
     useEffect(() => {
         const handleAnchorClick = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
@@ -38,8 +40,11 @@ const App: React.FC = () => {
             <Header />
             <main>
                 <Hero />
+                <BuildVehicle />
                 <Features />
                 <Products onProductClick={setSelectedProduct} />
+                <SpecsCompare />
+                <Applications />
                 <About />
                 <Contact />
             </main>
