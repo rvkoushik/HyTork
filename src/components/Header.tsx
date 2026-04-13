@@ -14,8 +14,10 @@ const Header: React.FC = () => {
 
     const links = [
         { label: 'Why HyTork', href: '#problems' },
+        { label: 'Build Your Vehicle', href: '#build' },
         { label: 'Capabilities', href: '#features' },
         { label: 'Solutions', href: '#products' },
+        { label: 'Applications', href: '#applications' },
         { label: 'Our Story', href: '#about' },
     ];
 
@@ -30,29 +32,28 @@ const Header: React.FC = () => {
             }}
         >
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                {/* ── Logo ── */}
                 <a href="#home" style={{ display: 'flex', alignItems: 'center' }}>
                     <img
                         src="/logotm.png"
                         alt="HyTork Brand"
-                        style={{ 
-                            height: 42, 
-                            width: 'auto', 
-                            objectFit: 'contain', 
-                            filter: 'brightness(0)' // Force black logo regardless of source color
+                        style={{
+                            height: 42,
+                            width: 'auto',
+                            objectFit: 'contain',
+                            filter: 'brightness(0)'
                         }}
                         referrerPolicy="no-referrer"
                     />
                 </a>
 
-                {/* ── Desktop Nav ── */}
-                <nav style={{ display: 'flex', alignItems: 'center', gap: 32 }} className="hidden md:flex">
+                <nav style={{ display: 'flex', alignItems: 'center', gap: 24 }} className="hidden md:flex">
                     {links.map(l => (
                         <a
                             key={l.label}
                             href={l.href}
                             style={{
-                                fontSize: 13.5, fontWeight: 700,
+                                fontSize: 12.5,
+                                fontWeight: 700,
                                 color: 'black',
                                 letterSpacing: '0.02em',
                                 textTransform: 'uppercase',
@@ -65,15 +66,14 @@ const Header: React.FC = () => {
                         </a>
                     ))}
                     <a
-                        href="#contact"
+                        href="#build"
                         className="btn-primary"
-                        style={{ fontSize: 11, padding: '10px 24px', borderRadius: 8, fontWeight: 800 }}
+                        style={{ fontSize: 11, padding: '10px 20px', borderRadius: 8, fontWeight: 800 }}
                     >
-                        Contact us
+                        Build Your Vehicle
                     </a>
                 </nav>
 
-                {/* ── Mobile toggle ── */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="md:hidden"
@@ -83,7 +83,6 @@ const Header: React.FC = () => {
                 </button>
             </div>
 
-            {/* ── Mobile Menu ── */}
             <AnimatePresence>
                 {menuOpen && (
                     <motion.div
